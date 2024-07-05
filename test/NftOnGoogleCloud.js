@@ -24,7 +24,7 @@ describe("NftOnGoogleCloud", async () => {
             //     return _owner;
             // }
 
-            expect(nft.owner()).to.equal(owner.address);
+            expect(await nft.owner()).to.equal(owner.address);
         });
     });
 });

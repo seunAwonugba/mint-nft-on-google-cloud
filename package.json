@@ -7,7 +7,10 @@
         "lint-solidity": "npx solhint 'contracts/**/*.sol'",
         "compile": "npx hardhat compile",
         "deploy": "npx hardhat deploy --network sepolia",
-        "test": "npx hardhat test"
+        "deploy:local": "npx hardhat deploy",
+        "test": "npx hardhat test",
+        "clean": "npx hardhat clean",
+        "start:local": "npx hardhat node"
     },
     "author": "seun awonugba",
     "license": "ISC",
