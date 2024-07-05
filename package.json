@@ -10,7 +10,8 @@
         "deploy:local": "npx hardhat deploy",
         "test": "npx hardhat test",
         "clean": "npx hardhat clean",
-        "start:local": "npx hardhat node"
+        "start:local": "npx hardhat node",
+        "script:mintto": "npx hardhat run script/nft.js --network localhost"
     },
     "author": "seun awonugba",
     "license": "ISC",

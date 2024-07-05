@@ -3,7 +3,7 @@ dotenv.config();
 const { network } = require("hardhat");
 const { verifyNft } = require("../utils/verifyNft");
 const { networkConfig, developmentChains } = require("../helper");
-
+const { LOCAL_NETWORK_ADDRESS } = process.env;
 module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deploy, log } = deployments;
     const { deployer } = await getNamedAccounts();
@@ -12,7 +12,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const chainId = network.config.chainId;
 
     if (developmentChains.includes(network.name)) {
-        senderAddress = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
+        senderAddress = LOCAL_NETWORK_ADDRESS;
     } else {
         senderAddress = networkConfig[chainId].walletAddress;
     }
